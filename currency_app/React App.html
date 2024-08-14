@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3001/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3001/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3001/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3001/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js.download"></script><style>/*
+! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */ /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.w-full {
+  width: 100%;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.border {
+  border-width: 1px;
+}
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2\.5 {
+  padding: 0.625rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
+}
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+
+body {
+padding: 3rem;
+background: #121212;
+color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hover\:bg-green-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.focus\:border-green-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.focus\:ring-green-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(34 197 94 / var(--tw-ring-opacity));
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .lg\:mx-60 {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .dark\:border-gray-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:placeholder-gray-400::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  }
+
+  .dark\:focus\:border-green-500:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(34 197 94 / var(--tw-border-opacity));
+  }
+
+  .dark\:focus\:ring-green-500:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(34 197 94 / var(--tw-ring-opacity));
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0NBQWMsQ0FBZDs7O0NBQWM7O0FBQWQ7OztFQUFBLHNCQUFjLEVBQWQsTUFBYztFQUFkLGVBQWMsRUFBZCxNQUFjO0VBQWQsbUJBQWMsRUFBZCxNQUFjO0VBQWQscUJBQWMsRUFBZCxNQUFjO0FBQUE7O0FBQWQ7O0VBQUEsZ0JBQWM7QUFBQTs7QUFBZDs7Ozs7Ozs7Q0FBYzs7QUFBZDs7RUFBQSxnQkFBYyxFQUFkLE1BQWM7RUFBZCw4QkFBYyxFQUFkLE1BQWMsRUFBZCxNQUFjO0VBQWQsV0FBYyxFQUFkLE1BQWM7RUFBZCwrSEFBYyxFQUFkLE1BQWM7RUFBZCw2QkFBYyxFQUFkLE1BQWM7RUFBZCwrQkFBYyxFQUFkLE1BQWM7RUFBZCx3Q0FBYyxFQUFkLE1BQWM7QUFBQTs7QUFBZDs7O0NBQWM7O0FBQWQ7RUFBQSxTQUFjLEVBQWQsTUFBYztFQUFkLG9CQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOzs7O0NBQWM7O0FBQWQ7RUFBQSxTQUFjLEVBQWQsTUFBYztFQUFkLGNBQWMsRUFBZCxNQUFjO0VBQWQscUJBQWMsRUFBZCxNQUFjO0FBQUE7O0FBQWQ7O0NBQWM7O0FBQWQ7RUFBQSx5Q0FBYztVQUFkLGlDQUFjO0FBQUE7O0FBQWQ7O0NBQWM7O0FBQWQ7Ozs7OztFQUFBLGtCQUFjO0VBQWQsb0JBQWM7QUFBQTs7QUFBZDs7Q0FBYzs7QUFBZDtFQUFBLGNBQWM7RUFBZCx3QkFBYztBQUFBOztBQUFkOztDQUFjOztBQUFkOztFQUFBLG1CQUFjO0FBQUE7O0FBQWQ7Ozs7O0NBQWM7O0FBQWQ7Ozs7RUFBQSwrR0FBYyxFQUFkLE1BQWM7RUFBZCw2QkFBYyxFQUFkLE1BQWM7RUFBZCwrQkFBYyxFQUFkLE1BQWM7RUFBZCxjQUFjLEVBQWQsTUFBYztBQUFBOztBQUFkOztDQUFjOztBQUFkO0VBQUEsY0FBYztBQUFBOztBQUFkOztDQUFjOztBQUFkOztFQUFBLGNB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bUJBO0lBbkJBO0VBbUJBO0FBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJAdGFpbHdpbmQgYmFzZTtcbkB0YWlsd2luZCBjb21wb25lbnRzO1xuQHRhaWx3aW5kIHV0aWxpdGllcztcblxuYm9keSB7XG5wYWRkaW5nOiAzcmVtO1xuYmFja2dyb3VuZDogIzEyMTIxMjtcbmNvbG9yOiB3aGl0ZTtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFO0lBQ0UsNENBQTRDO0VBQzlDO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2Qiw2QkFBNkI7RUFDN0IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFO0lBQ0UsdUJBQXVCO0VBQ3pCO0VBQ0E7SUFDRSx5QkFBeUI7RUFDM0I7QUFDRiIsInNvdXJjZXNDb250ZW50IjpbIi5BcHAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5BcHAtbG9nbyB7XG4gIGhlaWdodDogNDB2bWluO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuQG1lZGlhIChwcmVmZXJzLXJlZHVjZWQtbW90aW9uOiBuby1wcmVmZXJlbmNlKSB7XG4gIC5BcHAtbG9nbyB7XG4gICAgYW5pbWF0aW9uOiBBcHAtbG9nby1zcGluIGluZmluaXRlIDIwcyBsaW5lYXI7XG4gIH1cbn1cblxuLkFwcC1oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjgyYzM0O1xuICBtaW4taGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogY2FsYygxMHB4ICsgMnZtaW4pO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5BcHAtbGluayB7XG4gIGNvbG9yOiAjNjFkYWZiO1xufVxuXG5Aa2V5ZnJhbWVzIEFwcC1sb2dvLXNwaW4ge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div><h1 class=" lg:mx-32 text-5xl font-bold text-green-500">Convert Your Currencies Today</h1><p class=" lg:mx-32 opacity-40 py-6">Welcome to "Convert Your Currencies Today"! This application allows you to easily convert currencies based on the latest exchange rates. Whether you're planning a trip, managing your finances, or simply curious about the value of your money in different currencies, this tool is here to help.  </p><div class=" mt-5 flex items-center justify-center flex-col "><section class=" w-full lg:w-1/2"><form><div class="mb-4"><label for="date" class="block mb-2 text-sm font-medium text-gray-300 dark:text-white">Date</label><input type="Date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="date" required=""></div><div class="mb-4"><label for="Sourse Currency" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Select Sourse Currency</label><select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" name="Sourse Currency" id="Sourse Currency"><option value="">Select The Sourse Currency</option><option class=" p-1 " value="AED">United Arab Emirates Dirham </option><option class=" p-1 " value="AFN">Afghan Afghani </option><option class=" p-1 " value="ALL">Albanian Lek </option><option class=" p-1 " value="AMD">Armenian Dram </option><option class=" p-1 " value="ANG">Netherlands Antillean Guilder </option><option class=" p-1 " value="AOA">Angolan Kwanza </option><option class=" p-1 " value="ARS">Argentine Peso </option><option class=" p-1 " value="AUD">Australian Dollar </option><option class=" p-1 " value="AWG">Aruban Florin </option><option class=" p-1 " value="AZN">Azerbaijani Manat </option><option class=" p-1 " value="BAM">Bosnia-Herzegovina Convertible Mark </option><option class=" p-1 " value="BBD">Barbadian Dollar </option><option class=" p-1 " value="BDT">Bangladeshi Taka </option><option class=" p-1 " value="BGN">Bulgarian Lev </option><option class=" p-1 " value="BHD">Bahraini Dinar </option><option class=" p-1 " value="BIF">Burundian Franc </option><option class=" p-1 " value="BMD">Bermudan Dollar </option><option class=" p-1 " value="BND">Brunei Dollar </option><option class=" p-1 " value="BOB">Bolivian Boliviano </option><option class=" p-1 " value="BRL">Brazilian Real </option><option class=" p-1 " value="BSD">Bahamian Dollar </option><option class=" p-1 " value="BTC">Bitcoin </option><option class=" p-1 " value="BTN">Bhutanese Ngultrum </option><option class=" p-1 " value="BWP">Botswanan Pula </option><option class=" p-1 " value="BYN">Belarusian Ruble </option><option class=" p-1 " value="BZD">Belize Dollar </option><option class=" p-1 " value="CAD">Canadian Dollar </option><option class=" p-1 " value="CDF">Congolese Franc </option><option class=" p-1 " value="CHF">Swiss Franc </option><option class=" p-1 " value="CLF">Chilean Unit of Account (UF) </option><option class=" p-1 " value="CLP">Chilean Peso </option><option class=" p-1 " value="CNH">Chinese Yuan (Offshore) </option><option class=" p-1 " value="CNY">Chinese Yuan </option><option class=" p-1 " value="COP">Colombian Peso </option><option class=" p-1 " value="CRC">Costa Rican Colón </option><option class=" p-1 " value="CUC">Cuban Convertible Peso </option><option class=" p-1 " value="CUP">Cuban Peso </option><option class=" p-1 " value="CVE">Cape Verdean Escudo </option><option class=" p-1 " value="CZK">Czech Republic Koruna </option><option class=" p-1 " value="DJF">Djiboutian Franc </option><option class=" p-1 " value="DKK">Danish Krone </option><option class=" p-1 " value="DOP">Dominican Peso </option><option class=" p-1 " value="DZD">Algerian Dinar </option><option class=" p-1 " value="EGP">Egyptian Pound </option><option class=" p-1 " value="ERN">Eritrean Nakfa </option><option class=" p-1 " value="ETB">Ethiopian Birr </option><option class=" p-1 " value="EUR">Euro </option><option class=" p-1 " value="FJD">Fijian Dollar </option><option class=" p-1 " value="FKP">Falkland Islands Pound </option><option class=" p-1 " value="GBP">British Pound Sterling </option><option class=" p-1 " value="GEL">Georgian Lari </option><option class=" p-1 " value="GGP">Guernsey Pound </option><option class=" p-1 " value="GHS">Ghanaian Cedi </option><option class=" p-1 " value="GIP">Gibraltar Pound </option><option class=" p-1 " value="GMD">Gambian Dalasi </option><option class=" p-1 " value="GNF">Guinean Franc </option><option class=" p-1 " value="GTQ">Guatemalan Quetzal </option><option class=" p-1 " value="GYD">Guyanaese Dollar </option><option class=" p-1 " value="HKD">Hong Kong Dollar </option><option class=" p-1 " value="HNL">Honduran Lempira </option><option class=" p-1 " value="HRK">Croatian Kuna </option><option class=" p-1 " value="HTG">Haitian Gourde </option><option class=" p-1 " value="HUF">Hungarian Forint </option><option class=" p-1 " value="IDR">Indonesian Rupiah </option><option class=" p-1 " value="ILS">Israeli New Sheqel </option><option class=" p-1 " value="IMP">Manx pound </option><option class=" p-1 " value="INR">Indian Rupee </option><option class=" p-1 " value="IQD">Iraqi Dinar </option><option class=" p-1 " value="IRR">Iranian Rial </option><option class=" p-1 " value="ISK">Icelandic Króna </option><option class=" p-1 " value="JEP">Jersey Pound </option><option class=" p-1 " value="JMD">Jamaican Dollar </option><option class=" p-1 " value="JOD">Jordanian Dinar </option><option class=" p-1 " value="JPY">Japanese Yen </option><option class=" p-1 " value="KES">Kenyan Shilling </option><option class=" p-1 " value="KGS">Kyrgystani Som </option><option class=" p-1 " value="KHR">Cambodian Riel </option><option class=" p-1 " value="KMF">Comorian Franc </option><option class=" p-1 " value="KPW">North Korean Won </option><option class=" p-1 " value="KRW">South Korean Won </option><option class=" p-1 " value="KWD">Kuwaiti Dinar </option><option class=" p-1 " value="KYD">Cayman Islands Dollar </option><option class=" p-1 " value="KZT">Kazakhstani Tenge </option><option class=" p-1 " value="LAK">Laotian Kip </option><option class=" p-1 " value="LBP">Lebanese Pound </option><option class=" p-1 " value="LKR">Sri Lankan Rupee </option><option class=" p-1 " value="LRD">Liberian Dollar </option><option class=" p-1 " value="LSL">Lesotho Loti </option><option class=" p-1 " value="LYD">Libyan Dinar </option><option class=" p-1 " value="MAD">Moroccan Dirham </option><option class=" p-1 " value="MDL">Moldovan Leu </option><option class=" p-1 " value="MGA">Malagasy Ariary </option><option class=" p-1 " value="MKD">Macedonian Denar </option><option class=" p-1 " value="MMK">Myanma Kyat </option><option class=" p-1 " value="MNT">Mongolian Tugrik </option><option class=" p-1 " value="MOP">Macanese Pataca </option><option class=" p-1 " value="MRU">Mauritanian Ouguiya </option><option class=" p-1 " value="MUR">Mauritian Rupee </option><option class=" p-1 " value="MVR">Maldivian Rufiyaa </option><option class=" p-1 " value="MWK">Malawian Kwacha </option><option class=" p-1 " value="MXN">Mexican Peso </option><option class=" p-1 " value="MYR">Malaysian Ringgit </option><option class=" p-1 " value="MZN">Mozambican Metical </option><option class=" p-1 " value="NAD">Namibian Dollar </option><option class=" p-1 " value="NGN">Nigerian Naira </option><option class=" p-1 " value="NIO">Nicaraguan Córdoba </option><option class=" p-1 " value="NOK">Norwegian Krone </option><option class=" p-1 " value="NPR">Nepalese Rupee </option><option class=" p-1 " value="NZD">New Zealand Dollar </option><option class=" p-1 " value="OMR">Omani Rial </option><option class=" p-1 " value="PAB">Panamanian Balboa </option><option class=" p-1 " value="PEN">Peruvian Nuevo Sol </option><option class=" p-1 " value="PGK">Papua New Guinean Kina </option><option class=" p-1 " value="PHP">Philippine Peso </option><option class=" p-1 " value="PKR">Pakistani Rupee </option><option class=" p-1 " value="PLN">Polish Zloty </option><option class=" p-1 " value="PYG">Paraguayan Guarani </option><option class=" p-1 " value="QAR">Qatari Rial </option><option class=" p-1 " value="RON">Romanian Leu </option><option class=" p-1 " value="RSD">Serbian Dinar </option><option class=" p-1 " value="RUB">Russian Ruble </option><option class=" p-1 " value="RWF">Rwandan Franc </option><option class=" p-1 " value="SAR">Saudi Riyal </option><option class=" p-1 " value="SBD">Solomon Islands Dollar </option><option class=" p-1 " value="SCR">Seychellois Rupee </option><option class=" p-1 " value="SDG">Sudanese Pound </option><option class=" p-1 " value="SEK">Swedish Krona </option><option class=" p-1 " value="SGD">Singapore Dollar </option><option class=" p-1 " value="SHP">Saint Helena Pound </option><option class=" p-1 " value="SLL">Sierra Leonean Leone </option><option class=" p-1 " value="SOS">Somali Shilling </option><option class=" p-1 " value="SRD">Surinamese Dollar </option><option class=" p-1 " value="SSP">South Sudanese Pound </option><option class=" p-1 " value="STD">São Tomé and Príncipe Dobra (pre-2018) </option><option class=" p-1 " value="STN">São Tomé and Príncipe Dobra </option><option class=" p-1 " value="SVC">Salvadoran Colón </option><option class=" p-1 " value="SYP">Syrian Pound </option><option class=" p-1 " value="SZL">Swazi Lilangeni </option><option class=" p-1 " value="THB">Thai Baht </option><option class=" p-1 " value="TJS">Tajikistani Somoni </option><option class=" p-1 " value="TMT">Turkmenistani Manat </option><option class=" p-1 " value="TND">Tunisian Dinar </option><option class=" p-1 " value="TOP">Tongan Pa'anga </option><option class=" p-1 " value="TRY">Turkish Lira </option><option class=" p-1 " value="TTD">Trinidad and Tobago Dollar </option><option class=" p-1 " value="TWD">New Taiwan Dollar </option><option class=" p-1 " value="TZS">Tanzanian Shilling </option><option class=" p-1 " value="UAH">Ukrainian Hryvnia </option><option class=" p-1 " value="UGX">Ugandan Shilling </option><option class=" p-1 " value="USD">United States Dollar </option><option class=" p-1 " value="UYU">Uruguayan Peso </option><option class=" p-1 " value="UZS">Uzbekistan Som </option><option class=" p-1 " value="VEF">Venezuelan Bolívar Fuerte (Old) </option><option class=" p-1 " value="VES">Venezuelan Bolívar Soberano </option><option class=" p-1 " value="VND">Vietnamese Dong </option><option class=" p-1 " value="VUV">Vanuatu Vatu </option><option class=" p-1 " value="WST">Samoan Tala </option><option class=" p-1 " value="XAF">CFA Franc BEAC </option><option class=" p-1 " value="XAG">Silver Ounce </option><option class=" p-1 " value="XAU">Gold Ounce </option><option class=" p-1 " value="XCD">East Caribbean Dollar </option><option class=" p-1 " value="XDR">Special Drawing Rights </option><option class=" p-1 " value="XOF">CFA Franc BCEAO </option><option class=" p-1 " value="XPD">Palladium Ounce </option><option class=" p-1 " value="XPF">CFP Franc </option><option class=" p-1 " value="XPT">Platinum Ounce </option><option class=" p-1 " value="YER">Yemeni Rial </option><option class=" p-1 " value="ZAR">South African Rand </option><option class=" p-1 " value="ZMW">Zambian Kwacha </option><option class=" p-1 " value="ZWL">Zimbabwean Dollar </option></select></div><div class="mb-4"><label for="Target Currency" class="block mb-2 text-sm font-medium text-gray-300 dark:text-white">Target Currency</label><select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" name="Target Currency" id="Target Currency"><option value="Target Currency">Select The Target Currency</option><option class=" p-1 " value="AED">United Arab Emirates Dirham </option><option class=" p-1 " value="AFN">Afghan Afghani </option><option class=" p-1 " value="ALL">Albanian Lek </option><option class=" p-1 " value="AMD">Armenian Dram </option><option class=" p-1 " value="ANG">Netherlands Antillean Guilder </option><option class=" p-1 " value="AOA">Angolan Kwanza </option><option class=" p-1 " value="ARS">Argentine Peso </option><option class=" p-1 " value="AUD">Australian Dollar </option><option class=" p-1 " value="AWG">Aruban Florin </option><option class=" p-1 " value="AZN">Azerbaijani Manat </option><option class=" p-1 " value="BAM">Bosnia-Herzegovina Convertible Mark </option><option class=" p-1 " value="BBD">Barbadian Dollar </option><option class=" p-1 " value="BDT">Bangladeshi Taka </option><option class=" p-1 " value="BGN">Bulgarian Lev </option><option class=" p-1 " value="BHD">Bahraini Dinar </option><option class=" p-1 " value="BIF">Burundian Franc </option><option class=" p-1 " value="BMD">Bermudan Dollar </option><option class=" p-1 " value="BND">Brunei Dollar </option><option class=" p-1 " value="BOB">Bolivian Boliviano </option><option class=" p-1 " value="BRL">Brazilian Real </option><option class=" p-1 " value="BSD">Bahamian Dollar </option><option class=" p-1 " value="BTC">Bitcoin </option><option class=" p-1 " value="BTN">Bhutanese Ngultrum </option><option class=" p-1 " value="BWP">Botswanan Pula </option><option class=" p-1 " value="BYN">Belarusian Ruble </option><option class=" p-1 " value="BZD">Belize Dollar </option><option class=" p-1 " value="CAD">Canadian Dollar </option><option class=" p-1 " value="CDF">Congolese Franc </option><option class=" p-1 " value="CHF">Swiss Franc </option><option class=" p-1 " value="CLF">Chilean Unit of Account (UF) </option><option class=" p-1 " value="CLP">Chilean Peso </option><option class=" p-1 " value="CNH">Chinese Yuan (Offshore) </option><option class=" p-1 " value="CNY">Chinese Yuan </option><option class=" p-1 " value="COP">Colombian Peso </option><option class=" p-1 " value="CRC">Costa Rican Colón </option><option class=" p-1 " value="CUC">Cuban Convertible Peso </option><option class=" p-1 " value="CUP">Cuban Peso </option><option class=" p-1 " value="CVE">Cape Verdean Escudo </option><option class=" p-1 " value="CZK">Czech Republic Koruna </option><option class=" p-1 " value="DJF">Djiboutian Franc </option><option class=" p-1 " value="DKK">Danish Krone </option><option class=" p-1 " value="DOP">Dominican Peso </option><option class=" p-1 " value="DZD">Algerian Dinar </option><option class=" p-1 " value="EGP">Egyptian Pound </option><option class=" p-1 " value="ERN">Eritrean Nakfa </option><option class=" p-1 " value="ETB">Ethiopian Birr </option><option class=" p-1 " value="EUR">Euro </option><option class=" p-1 " value="FJD">Fijian Dollar </option><option class=" p-1 " value="FKP">Falkland Islands Pound </option><option class=" p-1 " value="GBP">British Pound Sterling </option><option class=" p-1 " value="GEL">Georgian Lari </option><option class=" p-1 " value="GGP">Guernsey Pound </option><option class=" p-1 " value="GHS">Ghanaian Cedi </option><option class=" p-1 " value="GIP">Gibraltar Pound </option><option class=" p-1 " value="GMD">Gambian Dalasi </option><option class=" p-1 " value="GNF">Guinean Franc </option><option class=" p-1 " value="GTQ">Guatemalan Quetzal </option><option class=" p-1 " value="GYD">Guyanaese Dollar </option><option class=" p-1 " value="HKD">Hong Kong Dollar </option><option class=" p-1 " value="HNL">Honduran Lempira </option><option class=" p-1 " value="HRK">Croatian Kuna </option><option class=" p-1 " value="HTG">Haitian Gourde </option><option class=" p-1 " value="HUF">Hungarian Forint </option><option class=" p-1 " value="IDR">Indonesian Rupiah </option><option class=" p-1 " value="ILS">Israeli New Sheqel </option><option class=" p-1 " value="IMP">Manx pound </option><option class=" p-1 " value="INR">Indian Rupee </option><option class=" p-1 " value="IQD">Iraqi Dinar </option><option class=" p-1 " value="IRR">Iranian Rial </option><option class=" p-1 " value="ISK">Icelandic Króna </option><option class=" p-1 " value="JEP">Jersey Pound </option><option class=" p-1 " value="JMD">Jamaican Dollar </option><option class=" p-1 " value="JOD">Jordanian Dinar </option><option class=" p-1 " value="JPY">Japanese Yen </option><option class=" p-1 " value="KES">Kenyan Shilling </option><option class=" p-1 " value="KGS">Kyrgystani Som </option><option class=" p-1 " value="KHR">Cambodian Riel </option><option class=" p-1 " value="KMF">Comorian Franc </option><option class=" p-1 " value="KPW">North Korean Won </option><option class=" p-1 " value="KRW">South Korean Won </option><option class=" p-1 " value="KWD">Kuwaiti Dinar </option><option class=" p-1 " value="KYD">Cayman Islands Dollar </option><option class=" p-1 " value="KZT">Kazakhstani Tenge </option><option class=" p-1 " value="LAK">Laotian Kip </option><option class=" p-1 " value="LBP">Lebanese Pound </option><option class=" p-1 " value="LKR">Sri Lankan Rupee </option><option class=" p-1 " value="LRD">Liberian Dollar </option><option class=" p-1 " value="LSL">Lesotho Loti </option><option class=" p-1 " value="LYD">Libyan Dinar </option><option class=" p-1 " value="MAD">Moroccan Dirham </option><option class=" p-1 " value="MDL">Moldovan Leu </option><option class=" p-1 " value="MGA">Malagasy Ariary </option><option class=" p-1 " value="MKD">Macedonian Denar </option><option class=" p-1 " value="MMK">Myanma Kyat </option><option class=" p-1 " value="MNT">Mongolian Tugrik </option><option class=" p-1 " value="MOP">Macanese Pataca </option><option class=" p-1 " value="MRU">Mauritanian Ouguiya </option><option class=" p-1 " value="MUR">Mauritian Rupee </option><option class=" p-1 " value="MVR">Maldivian Rufiyaa </option><option class=" p-1 " value="MWK">Malawian Kwacha </option><option class=" p-1 " value="MXN">Mexican Peso </option><option class=" p-1 " value="MYR">Malaysian Ringgit </option><option class=" p-1 " value="MZN">Mozambican Metical </option><option class=" p-1 " value="NAD">Namibian Dollar </option><option class=" p-1 " value="NGN">Nigerian Naira </option><option class=" p-1 " value="NIO">Nicaraguan Córdoba </option><option class=" p-1 " value="NOK">Norwegian Krone </option><option class=" p-1 " value="NPR">Nepalese Rupee </option><option class=" p-1 " value="NZD">New Zealand Dollar </option><option class=" p-1 " value="OMR">Omani Rial </option><option class=" p-1 " value="PAB">Panamanian Balboa </option><option class=" p-1 " value="PEN">Peruvian Nuevo Sol </option><option class=" p-1 " value="PGK">Papua New Guinean Kina </option><option class=" p-1 " value="PHP">Philippine Peso </option><option class=" p-1 " value="PKR">Pakistani Rupee </option><option class=" p-1 " value="PLN">Polish Zloty </option><option class=" p-1 " value="PYG">Paraguayan Guarani </option><option class=" p-1 " value="QAR">Qatari Rial </option><option class=" p-1 " value="RON">Romanian Leu </option><option class=" p-1 " value="RSD">Serbian Dinar </option><option class=" p-1 " value="RUB">Russian Ruble </option><option class=" p-1 " value="RWF">Rwandan Franc </option><option class=" p-1 " value="SAR">Saudi Riyal </option><option class=" p-1 " value="SBD">Solomon Islands Dollar </option><option class=" p-1 " value="SCR">Seychellois Rupee </option><option class=" p-1 " value="SDG">Sudanese Pound </option><option class=" p-1 " value="SEK">Swedish Krona </option><option class=" p-1 " value="SGD">Singapore Dollar </option><option class=" p-1 " value="SHP">Saint Helena Pound </option><option class=" p-1 " value="SLL">Sierra Leonean Leone </option><option class=" p-1 " value="SOS">Somali Shilling </option><option class=" p-1 " value="SRD">Surinamese Dollar </option><option class=" p-1 " value="SSP">South Sudanese Pound </option><option class=" p-1 " value="STD">São Tomé and Príncipe Dobra (pre-2018) </option><option class=" p-1 " value="STN">São Tomé and Príncipe Dobra </option><option class=" p-1 " value="SVC">Salvadoran Colón </option><option class=" p-1 " value="SYP">Syrian Pound </option><option class=" p-1 " value="SZL">Swazi Lilangeni </option><option class=" p-1 " value="THB">Thai Baht </option><option class=" p-1 " value="TJS">Tajikistani Somoni </option><option class=" p-1 " value="TMT">Turkmenistani Manat </option><option class=" p-1 " value="TND">Tunisian Dinar </option><option class=" p-1 " value="TOP">Tongan Pa'anga </option><option class=" p-1 " value="TRY">Turkish Lira </option><option class=" p-1 " value="TTD">Trinidad and Tobago Dollar </option><option class=" p-1 " value="TWD">New Taiwan Dollar </option><option class=" p-1 " value="TZS">Tanzanian Shilling </option><option class=" p-1 " value="UAH">Ukrainian Hryvnia </option><option class=" p-1 " value="UGX">Ugandan Shilling </option><option class=" p-1 " value="USD">United States Dollar </option><option class=" p-1 " value="UYU">Uruguayan Peso </option><option class=" p-1 " value="UZS">Uzbekistan Som </option><option class=" p-1 " value="VEF">Venezuelan Bolívar Fuerte (Old) </option><option class=" p-1 " value="VES">Venezuelan Bolívar Soberano </option><option class=" p-1 " value="VND">Vietnamese Dong </option><option class=" p-1 " value="VUV">Vanuatu Vatu </option><option class=" p-1 " value="WST">Samoan Tala </option><option class=" p-1 " value="XAF">CFA Franc BEAC </option><option class=" p-1 " value="XAG">Silver Ounce </option><option class=" p-1 " value="XAU">Gold Ounce </option><option class=" p-1 " value="XCD">East Caribbean Dollar </option><option class=" p-1 " value="XDR">Special Drawing Rights </option><option class=" p-1 " value="XOF">CFA Franc BCEAO </option><option class=" p-1 " value="XPD">Palladium Ounce </option><option class=" p-1 " value="XPF">CFP Franc </option><option class=" p-1 " value="XPT">Platinum Ounce </option><option class=" p-1 " value="YER">Yemeni Rial </option><option class=" p-1 " value="ZAR">South African Rand </option><option class=" p-1 " value="ZMW">Zambian Kwacha </option><option class=" p-1 " value="ZWL">Zimbabwean Dollar </option></select></div><div class="mb-4"><label for="Amount in Source Currency" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount in Source Currency</label><input type="number" id="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="Amount in Source Currency" required=""></div><button class=" bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md ">Get the Target Currency</button></form></section></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>
